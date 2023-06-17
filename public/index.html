@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- https://www.npmjs.com/package/html-webpack-plugin  文档 -->
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body>
+    <!-- 用于测试 -->
+    <!-- <div class="container">用于测试</div> -->
+    <div class="w-screen h-screen bg-red-300 text-[50px] text-center overflow-hidden text-[#fff]">
+        hello tailwindcss !!
+    </div>
+</body>
+
+<% htmlWebpackPlugin.options.cdn.script.forEach(function (item){%>
+    <script src="<%=item%>"></script>
+    <%})%>
+
+
+        <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.core.min.js"></script> -->
+        <!-- 加载js和css哪一个会阻塞页面的渲染 -->
+        <!-- 页面加载的流程是什么 -->
+        <!-- script标签defer async prefetch 分别什么作用 什么时候使用 -->
+
+</html>
